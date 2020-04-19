@@ -15,9 +15,31 @@ hr{
 
 .data{
   color:#000;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:200;
 }
 
 .container-song
 {
   width:30%;
+}
+
+.portada{
+  width:196px;
+  height:196px;
+}
+
+.titulo{
+  color:#9c9c9c;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:200;
+}
+
+.canciones{
+  list-style: none;
+  line-height: 2.0em;
+}
+
+.container-detail{
+  margin-top:30px;
 }
