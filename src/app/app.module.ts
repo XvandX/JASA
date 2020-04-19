@@ -8,7 +8,8 @@ import { CancionComponent } from './cancion/cancion.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CancionComponent
+    CancionComponent,
+    
   ],
   imports: [
     BrowserModule,
