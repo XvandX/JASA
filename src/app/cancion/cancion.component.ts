@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../Cancion';
+import { CANCIONES } from '../list-songs';
 
 @Component({
   selector: 'app-cancion',
@@ -7,16 +8,17 @@ import { Cancion } from '../Cancion';
   styleUrls: ['./cancion.component.css'],
 })
 export class CancionComponent implements OnInit {
-  cancion: Cancion = {
-    id: 1,
-    title: 'Bad Guy',
-    author: 'Billie Eilish',
-    year: 2019,
-    album: 'When we all fall asleep, Where do we go?',
-    style: 'pop',
-  };
+
+  canciones = CANCIONES;
+  cancionSeleccionada: Cancion;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  showDetail(cancion:Cancion):void{
+    console.log("Este es el id de la canción seleccionada",cancion.id)
+    this.cancionSeleccionada = cancion;
+  }
 }
 

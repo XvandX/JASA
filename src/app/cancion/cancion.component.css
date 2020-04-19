@@ -1,23 +1,47 @@
-h2{
-  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:400;
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
-h3{
-  color:#9c9c9c;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:200;
+h3 {
+  color: #9c9c9c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-hr{
+hr {
   border: 2px solid #9c9c9c;
 }
 
-.data{
-  color:#000;
+.data {
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-.container-song
-{
-  width:30%;
+.container-song {
+  width: 30%;
+}
+
+.portada {
+  width: 196px;
+  height: 196px;
+}
+
+.titulo {
+  color: #9c9c9c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+.titulo:hover{
+  color:red;
+}
+
+.canciones {
+  list-style: none;
+  line-height: 2em;
+}
+
+.container-detalle {
+  margin-top: 30px;
 }
