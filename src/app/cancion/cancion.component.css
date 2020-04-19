@@ -1,45 +1,44 @@
-h2{
-  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:400;
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
-h3{
-  color:#9c9c9c;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:200;
+h3 {
+  color: #9c9c9c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-hr{
+hr {
   border: 2px solid #9c9c9c;
 }
 
-.data{
-  color:#000;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:200;
+.data {
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-.container-song
-{
-  width:30%;
+.container-song {
+  width: 30%;
 }
 
-.portada{
-  width:196px;
-  height:196px;
+.portada {
+  width: 196px;
+  height: 196px;
 }
 
-.titulo{
-  color:#9c9c9c;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight:200;
+.titulo {
+  color: #9c9c9c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-.canciones{
+.canciones {
   list-style: none;
-  line-height: 2.0em;
+  line-height: 2em;
 }
 
-.container-detail{
-  margin-top:30px;
+.container-detalle {
+  margin-top: 30px;
 }
