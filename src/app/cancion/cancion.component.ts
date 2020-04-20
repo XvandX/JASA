@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../Cancion';
 import { CANCIONES } from '../list-songs';
+import { Repertorio } from '../Clase';
 
 @Component({
   selector: 'app-cancion',
@@ -12,13 +13,17 @@ export class CancionComponent implements OnInit {
   canciones = CANCIONES;
   cancionSeleccionada: Cancion;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  showDetail(cancion:Cancion):void{
-    console.log("Este es el id de la canción seleccionada",cancion.id)
+  showDetail(cancion: Cancion): void {
+    console.log("Este es el id de la canción seleccionada", cancion.id)
     this.cancionSeleccionada = cancion;
   }
 }
+
+let datos = new Repertorio();
+console.log(datos);
+
 
