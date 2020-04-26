@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancionComponent } from './cancion/cancion.component';
+import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CancionComponent,
-    
+    CancionDetalleComponent,
+
   ],
   imports: [
     BrowserModule,

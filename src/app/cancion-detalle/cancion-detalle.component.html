@@ -1,0 +1,18 @@
+<div *ngIf="cancion" class="container-detalle">
+  <hr />
+  <h2>Datos sobre la canción</h2>
+  <h2>{{ cancion.title }}</h2>
+  <img src="{{ cancion.src }}" alt="portada" class="portada" />
+  <h3>
+    Autor: <span class="data">{{ cancion.author }}</span>
+  </h3>
+  <h3>
+    Año: <span class="data">{{ cancion.year }}</span>
+  </h3>
+  <h3>
+    Album: <span class="data">{{ cancion.album }}</span>
+  </h3>
+  <h3>
+    Estilo: <span class="data">{{ cancion.style }}</span>
+  </h3>
+</div>

@@ -24,6 +24,6 @@ export class CancionComponent implements OnInit {
 }
 
 let datos = new Repertorio();
-console.log(datos);
+console.log(datos.canciones[0]);
 
 
