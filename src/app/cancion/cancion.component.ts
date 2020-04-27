@@ -17,6 +17,8 @@ export class CancionComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  filterSong = "";
+
   showDetail(cancion: Cancion): void {
     console.log("Este es el id de la canción seleccionada", cancion.id)
     this.cancionSeleccionada = cancion;

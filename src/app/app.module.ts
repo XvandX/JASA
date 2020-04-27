@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CancionComponent } from './cancion/cancion.component';
 import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,11 +14,13 @@ import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.compo
     AppComponent,
     CancionComponent,
     CancionDetalleComponent,
+    FilterPipe,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

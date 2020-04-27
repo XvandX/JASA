@@ -1,8 +1,8 @@
 <div class="container-song">
   <h2>Esta es la música que podrás disfrutar:</h2>
   <ul class="canciones">
-    <li *ngFor="let cancion of canciones" (click)="showDetail(cancion)"
-      [class.selected]="cancion === cancionSeleccionada">
+    <input type="search" name="filterSong" [(ngModel)]="filterSong" placeholder="buscar...">
+    <li *ngFor="let cancion of canciones | filter: filterSong" (click)="showDetail(cancion)">
       <span class="titulo">{{ cancion.title }}</span>
       <span class="data"> ({{ cancion.author }}-{{cancion.album}})</span>
     </li>
