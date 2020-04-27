@@ -19,10 +19,6 @@ hr {
   font-weight: 200;
 }
 
-.container-song {
-  width: 30%;
-}
-
 .titulo {
   color: #9c9c9c;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -32,8 +28,4 @@ hr {
   color:red;
 }
 
-.canciones {
-  list-style: none;
-  line-height: 2em;
-}
 

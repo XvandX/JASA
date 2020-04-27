@@ -6,6 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any, arg: any): any {
+    if (arg === "") return value;
     const resultSongs = [];
     for (const cancion of value) {
       if (cancion.title.toUpperCase().indexOf(arg.toUpperCase()) > -1) {
