@@ -7,6 +7,7 @@ import { CancionComponent } from './cancion/cancion.component';
 import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { PlayerComponent } from './player/player.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     CancionComponent,
     CancionDetalleComponent,
     FilterPipe,
+    PlayerComponent,
 
   ],
   imports: [

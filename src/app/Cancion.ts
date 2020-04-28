@@ -6,4 +6,5 @@ export interface Cancion {
   year: number;
   album: string;
   style: string;
+  url: string;
 }

@@ -1,0 +1,9 @@
+<audio src="{{cancion.url}}" id="player"></audio>
+<button id="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
+<button id="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
+<button id="stop" onclick="document.getElementById('player').stop()"><i class="fas fa-stop"></i></button>
+<button id="volumedown" onclick="document.getElementById('player').volume-=0.1"><i
+    class="fas fa-volume-down"></i></button>
+<button id="volumeup" onclick="document.getElementById('player').volume+=0.1"><i class="fas fa-volume-up"></i></button>
+<span id="time" class="uk-align-right uk-margin-remove-bottom">3:53/4:57</span>
+<progress id="seekbar" value="0" max="1" style="background-color: #e5e5e5;" class="uk-width-1-1"></progress>
