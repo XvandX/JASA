@@ -9,6 +9,7 @@ import { Cancion } from '../Cancion';
 export class PlayerComponent implements OnInit {
   @Input() cancion: Cancion;
 
+
   constructor() { }
 
   ngOnInit(): void {
