@@ -1,10 +1,12 @@
-<audio src="{{cancion.url}}" id="player"></audio>
-<button id="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
-<button id="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
-<button id="stop" onclick="document.getElementById('player').stop()"><i class="fas fa-stop"></i></button>
-<button id="volumedown" onclick="document.getElementById('player').volume-=0.1"><i
-    class="fas fa-volume-down"></i></button>
-<button id="volumeup" onclick="document.getElementById('player').volume+=0.1"><i class="fas fa-volume-up"></i></button>
-<span id="time" class="uk-align-right uk-margin-remove-bottom">3:53/4:57</span>
-<input id="track" type="range" min="1" max="100" value="0" step="0.10" style="width:100%"/>
+<audio src="{{cancion.url}}" id="player" #player></audio>
+<button id="play" (click)="onAudioPlay()"><i class="fas fa-play"></i></button>
+<button id="pause" (click)="onAudioPause()"><i class="fas fa-pause"></i></button>
+<button id="stop" (click)="onAudioStop()"><i class="fas fa-stop"></i></button>
+<button id="volumedown" (click)="onAudioVolumeDown()"><i class="fas fa-volume-down"></i></button>
+<button id="volumeup" (click)="onAudioVolumeUp()"><i class="fas fa-volume-up"></i></button>
+<span id="remaining" #remaining></span><span id="time" class="uk-align-right uk-margin-remove-bottom" #time></span>
+<div id="progressBar" class="uk-width-1-1">
+  <div id="progress" #progress>
 
+  </div>
+</div>
