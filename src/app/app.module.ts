@@ -8,6 +8,8 @@ import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.compo
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -17,12 +19,13 @@ import { PlayerComponent } from './player/player.component';
     CancionDetalleComponent,
     FilterPipe,
     PlayerComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
