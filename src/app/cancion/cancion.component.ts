@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../Cancion';
 import { CANCIONES } from '../list-songs';
 import { Repertorio } from '../Clase';
+import { MaterialModule } from '../material/material.module';
 
 @Component({
   selector: 'app-cancion',
