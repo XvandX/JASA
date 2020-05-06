@@ -24,7 +24,6 @@ export class PlayerComponent implements OnInit {
   onAudioPlay(): void {
     this.player.nativeElement.play();
     this.durationToString()
-    this.timeRemainingToString()
     this.player.nativeElement.addEventListener('timeupdate', (event) => {
       console.log(event)
       let playerComponent = this
@@ -55,7 +54,7 @@ export class PlayerComponent implements OnInit {
     let d = new Date(durationInSec * 1000);
     let minute = (d.getMinutes() < 9) ? "0" + d.getMinutes() : d.getMinutes();
     let second = (d.getSeconds() < 9) ? "0" + d.getSeconds() : d.getSeconds();
-    let duration = minute + ":" + second;
+    var duration = minute + ":" + second;
     console.log("esto es la duracion total", duration)
     this.time.nativeElement.innerHTML = duration;
   }
@@ -65,9 +64,11 @@ export class PlayerComponent implements OnInit {
     let r = new Date(timeRemainingSec * 1000);
     let minuteRemain = (r.getMinutes() < 9) ? "0" + r.getMinutes() : r.getMinutes();
     let secondRemain = (r.getSeconds() < 9) ? "0" + r.getSeconds() : r.getSeconds();
-    let remaining = " -" + minuteRemain + ":" + secondRemain;
-    this.remaining.nativeElement.innerHTML = remaining;
+    let remaining = " -" + (minuteRemain) + ":" + (secondRemain);
+    console.log("esto es minutos al principio", minuteRemain)
+    console.log("esto es second al principio", secondRemain)
     console.log("esto es el tiempo restante", remaining)
+    this.remaining.nativeElement.innerHTML = remaining;
   }
 
   changeProgressBar(): void {

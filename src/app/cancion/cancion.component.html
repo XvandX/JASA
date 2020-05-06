@@ -1,8 +1,10 @@
 <div class="container-song uk-flex uk-flex-wrap uk-flex-between">
   <div>
     <h2 class="uk-margin-medium-left">Esta es la música que podrás disfrutar:</h2>
-    <input type="search" class="uk-input uk-width-* uk-margin-medium-left" name="filterSong" [(ngModel)]="filterSong"
-    placeholder="buscar...">
+    <mat-form-field class="uk-margin-medium-left uk-width-*">
+      <input type="search" matInput name="filterSong" class="uk-width-* uk-margin-medium-left" [(ngModel)]="filterSong"
+        placeholder="buscar...">
+    </mat-form-field>
     <table class="uk-table uk-table-small uk-table-striped uk-width-*  uk-margin-medium-left">
       <thead>
         <th>Título</th>
