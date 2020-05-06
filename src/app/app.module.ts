@@ -21,7 +21,6 @@ import { MaterialModule } from './material/material.module';
     CancionDetalleComponent,
     FilterPipe,
     PlayerComponent,
-
   ],
   imports: [
     BrowserModule,

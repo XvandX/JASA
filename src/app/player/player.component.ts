@@ -58,7 +58,6 @@ export class PlayerComponent implements OnInit {
     console.log("esto es la duracion total", duration)
     this.time.nativeElement.innerHTML = duration;
   }
-
   timeRemainingToString(): void {
     let timeRemainingSec = (this.player.nativeElement.duration - this.player.nativeElement.currentTime)
     let r = new Date(timeRemainingSec * 1000);
@@ -76,8 +75,5 @@ export class PlayerComponent implements OnInit {
     console.log("este es el avance", advance)
     this.progress.nativeElement.style.width = advance;
   }
-
-
 }
-
 
