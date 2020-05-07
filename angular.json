@@ -89,11 +89,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<< HEAD
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-=======
               "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
->>>>>>> 86b1c15e004aefbd0a54c5cbfe2c71f72eba9c7e
               "src/styles.css"
             ],
             "scripts": []
