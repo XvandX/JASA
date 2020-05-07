@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule } from './material/material.module';
+
 
 
 
@@ -27,6 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MaterialModule
 
   ],
   providers: [],
