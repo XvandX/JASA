@@ -9,6 +9,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 import { MaterialModule } from './material/material.module';
 
 
@@ -27,6 +28,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MaterialModule
 
   ],
