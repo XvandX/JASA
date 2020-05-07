@@ -11,7 +11,7 @@ import { PlayerComponent } from './player/player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MaterialModule } from './material/material.module';
-
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -22,6 +22,7 @@ import { MaterialModule } from './material/material.module';
     CancionDetalleComponent,
     FilterPipe,
     PlayerComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,8 @@ import { MaterialModule } from './material/material.module';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MaterialModule
+    MaterialModule,
+    MatInputModule,
 
   ],
   providers: [],
