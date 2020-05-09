@@ -20,3 +20,7 @@ h4 {
   height: 196px;
 }
 
+.texto-album{
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
