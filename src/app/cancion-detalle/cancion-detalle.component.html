@@ -1,5 +1,5 @@
 <div *ngIf="cancion" class="container-detalle uk-margin-medium-right">
-  <h2 class="uk-margin-small-left">Canción seleccionada:</h2>
+  <h3 class="uk-margin-small-left uk-margin-medium-bottom mat-h3">Canción seleccionada:</h3>
   <div class="uk-card uk-card-secondary uk-width-large uk-margin-small-left">
     <div class="uk-card-header">
       <h2 class="uk-card-title">{{ cancion.title }}</h2>
@@ -11,7 +11,7 @@
         </div>
         <div class="uk-width-1-3 uk-text-middle uk-margin-small-left">
           <h5 class="uk-margin-small-top">
-            Autor: <input readonly matInput class="data exto-album" value="{{cancion.author}}">
+            Autor: <input readonly matInput class="data texto-album" value="{{cancion.author}}">
           </h5>
           <h5 class="uk-margin-small-top">
             Año: <input readonly matInput class="data texto-album" value="{{cancion.year }}">

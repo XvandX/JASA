@@ -4,29 +4,36 @@ h2 {
   font-weight: 400;
 }
 
-h3 {
+/* h3 {
   color: #9c9c9c;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
-}
+} */
 
 hr {
   border: 2px solid #9c9c9c;
 }
 
 .data {
-  color: #000;
+  color: #333333 !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
 }
 
 .titulo {
-  color: #9c9c9c;
+  color: #333333 !important;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
 }
-.titulo:hover{
-  color:red;
+
+.mat-list-base{
+  color: #333333;
 }
 
+.mat-list-item{
+  color: #333333;
+}
 
+tr .mat-list-item:hover{
+  color:red;
+}

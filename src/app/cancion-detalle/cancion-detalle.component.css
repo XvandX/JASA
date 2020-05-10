@@ -21,6 +21,5 @@ h4 {
 }
 
 .texto-album{
-  overflow-wrap: break-word;
-  word-break: break-all;
+  text-overflow: ellipsis;
 }

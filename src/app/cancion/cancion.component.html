@@ -1,23 +1,37 @@
-<div class="container-song uk-flex uk-flex-wrap uk-flex-between">
+<div class="container-song uk-flex uk-flex-wrap uk-flex-between uk-padding-remove">
   <div>
-    <h2 class="uk-margin-medium-left">Esta es la música que podrás disfrutar:</h2>
-    <mat-form-field class="uk-margin-medium-left uk-width-*">
-      <input type="search" matInput name="filterSong" class="uk-width-* uk-margin-medium-left" [(ngModel)]="filterSong"
-        placeholder="buscar...">
+    <h3 class="uk-margin-medium-left mat-h3">Buscador de música:</h3>
+    <mat-form-field class="uk-margin-medium-left uk-width-* busqueda">
+      <input matInput type="search" name="filterSong" class="uk-width-* uk-margin-medium-left" [(ngModel)]="filterSong"
+        placeholder="buscar..." />
     </mat-form-field>
     <table class="uk-table uk-table-small uk-table-striped uk-width-*  uk-margin-medium-left">
-      <thead>
-        <th>Título</th>
-        <th>Autor</th>
-        <th>Álbum</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let cancion of canciones | filter: filterSong" (click)="showDetail(cancion)">
-          <td class="titulo">{{ cancion.title }}</td>
-          <td class="data">{{ cancion.author }}</td>
-          <td class="data">{{cancion.album}}</td>
-        </tr>
-      </tbody>
+      <mat-list>
+        <thead>
+          <th>
+            <mat-list-item>Título</mat-list-item>
+          </th>
+          <th>
+            <mat-list-item>Autor</mat-list-item>
+          </th>
+          <th>
+            <mat-list-item>Álbum</mat-list-item>
+          </th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cancion of canciones | filter: filterSong" (click)="showDetail(cancion)">
+            <td class="titulo uk-padding-remove">
+              <mat-list-item>{{ cancion.title }}</mat-list-item>
+            </td>
+            <td class=" data uk-padding-remove">
+              <mat-list-item>{{ cancion.author }}</mat-list-item>
+            </td>
+            <td class="data uk-padding-remove">
+              <mat-list-item>{{cancion.album}}</mat-list-item>
+            </td>
+          </tr>
+        </tbody>
+      </mat-list>
     </table>
   </div>
   <app-cancion-detalle [cancion]="cancionSeleccionada"></app-cancion-detalle>
