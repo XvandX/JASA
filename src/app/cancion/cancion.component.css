@@ -37,3 +37,11 @@ hr {
 tr .mat-list-item:hover{
   color:red;
 }
+
+::ng-deep.mat-form-field-underline {
+  background-color: #9c9c9c !important;
+}
+
+.placeholder{
+  color:#9c9c9c !important;
+}

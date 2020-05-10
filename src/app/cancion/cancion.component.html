@@ -2,8 +2,9 @@
   <div>
     <h3 class="uk-margin-medium-left mat-h3">Buscador de música:</h3>
     <mat-form-field class="uk-margin-medium-left uk-width-* busqueda">
-      <input matInput type="search" name="filterSong" class="uk-width-* uk-margin-medium-left" [(ngModel)]="filterSong"
-        placeholder="buscar..." />
+      <input id="buscador" matInput type="search" name="filterSong" class="uk-width-* uk-margin-medium-left"
+        [(ngModel)]="filterSong" />
+      <mat-placeholder class="placeholder">buscar...</mat-placeholder>
     </mat-form-field>
     <table class="uk-table uk-table-small uk-table-striped uk-width-*  uk-margin-medium-left">
       <mat-list>
