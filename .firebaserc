@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "jasa-d87f1": {
+      "hosting": {
+        "musicauoc": [
+          "jasa-d87f1"
+        ]
+      }
+    }
+  }
+}

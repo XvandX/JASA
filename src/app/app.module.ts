@@ -9,9 +9,15 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MaterialModule } from './material/material.module';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { TestdbComponent } from './testdb/testdb.component';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 
@@ -22,6 +28,7 @@ import {MatInputModule} from '@angular/material/input';
     CancionDetalleComponent,
     FilterPipe,
     PlayerComponent,
+    TestdbComponent,
 
   ],
   imports: [
@@ -32,9 +39,15 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MaterialModule,
     MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+  }
+}
