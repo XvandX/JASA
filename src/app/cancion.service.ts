@@ -12,5 +12,10 @@ export class CancionService {
 
   getCanciones(): Observable<Cancion[]> {
     return of(CANCIONES);
+  };
+
+  getCancion(id: number): Observable<Cancion> {
+    return of(CANCIONES.find(cancion => cancion.id === id));
   }
+
 }

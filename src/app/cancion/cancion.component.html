@@ -20,20 +20,19 @@
           </th>
         </thead>
         <tbody>
-          <tr *ngFor="let cancion of canciones | filter: filterSong" (click)="showDetail(cancion)">
+          <tr *ngFor="let cancion of canciones | filter: filterSong">
             <td class="titulo uk-padding-remove">
-              <mat-list-item>{{ cancion.title }}</mat-list-item>
+              <mat-list-item><a routerLink="/detalle/{{cancion.id}}">{{ cancion.title }}</a></mat-list-item>
             </td>
             <td class=" data uk-padding-remove">
-              <mat-list-item>{{ cancion.author }}</mat-list-item>
+              <mat-list-item><a routerLink="/detalle/{{cancion.id}}">{{ cancion.author }}</a></mat-list-item>
             </td>
             <td class="data uk-padding-remove">
-              <mat-list-item>{{cancion.album}}</mat-list-item>
+              <mat-list-item><a routerLink="/detalle/{{cancion.id}}">{{ cancion.album }}</a></mat-list-item>
             </td>
           </tr>
         </tbody>
       </mat-list>
     </table>
   </div>
-  <app-cancion-detalle [cancion]="cancionSeleccionada"></app-cancion-detalle>
 </div>

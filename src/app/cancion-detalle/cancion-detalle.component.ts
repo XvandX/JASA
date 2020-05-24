@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CancionService } from '../cancion.service';
 import { Cancion } from '../Cancion';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-cancion-detalle',
@@ -8,11 +11,23 @@ import { Cancion } from '../Cancion';
 })
 export class CancionDetalleComponent implements OnInit {
 
-  @Input() cancion: Cancion;
+  cancion: Cancion;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private cancionService: CancionService,
+    private location: Location) { }
 
   ngOnInit(): void {
+    this.getCancion();
+  }
+
+  getCancion(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.cancionService.getCancion(id).subscribe(cancion => this.cancion = cancion)
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
