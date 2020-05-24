@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { Cancion } from './Cancion';
 import { CANCIONES } from './list-songs';
@@ -8,10 +9,10 @@ import { CANCIONES } from './list-songs';
 })
 export class CancionService {
 
-  constructor() { }
+  constructor(private firestore: AngularFirestore) { }
 
   getCanciones(): Observable<Cancion[]> {
-    return of(CANCIONES);
+    return this.firestore.collection<Cancion>('canciones').valueChanges();
   };
 
   getCancion(id: number): Observable<Cancion> {
