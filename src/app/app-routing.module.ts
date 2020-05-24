@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TestdbComponent } from './testdb/testdb.component'
+import { TestdbComponent } from './testdb/testdb.component';
+import { CancionComponent } from './cancion/cancion.component';
 
 const routes: Routes = [
-  { path: 'testDB', component: TestdbComponent }
+  { path: 'canciones', component: CancionComponent },
+  { path: '', redirectTo: '/canciones', pathMatch: 'full' }
 ];
 
 @NgModule({

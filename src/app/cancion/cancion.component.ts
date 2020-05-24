@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../Cancion';
-import { CANCIONES } from '../list-songs';
+import { CancionService } from '../cancion.service';
 import { Repertorio } from '../Clase';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,12 +13,20 @@ import { Repertorio } from '../Clase';
 })
 export class CancionComponent implements OnInit {
 
-  canciones = CANCIONES;
+  canciones: Cancion[];
   cancionSeleccionada: Cancion;
 
-  constructor() { }
+  constructor(private cancionService: CancionService) {
 
-  ngOnInit(): void { }
+  }
+
+  getCanciones(): void {
+    this.cancionService.getCanciones().subscribe(canciones => this.canciones = canciones)
+  }
+
+  ngOnInit(): void {
+    this.getCanciones();
+  }
 
   filterSong = "";
 
