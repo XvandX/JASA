@@ -25,7 +25,6 @@ export class CancionService {
     this.cancionDoc = this.firestore.doc<Cancion>(`canciones/${id}`);
     return this.cancion = this.cancionDoc.snapshotChanges().pipe(map(action => {
       const data = action.payload.data() as Cancion;
-      data.id = action.payload.id;
       return data
     }))
   }
