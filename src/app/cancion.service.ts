@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { Cancion } from './Cancion';
 import { CANCIONES } from './list-songs';
@@ -14,21 +14,20 @@ export class CancionService {
 
   constructor(private firestore: AngularFirestore) { }
 
+  private cancionDoc: AngularFirestoreDocument<Cancion>;
+  private cancion: Observable<Cancion>;
+
   getCanciones(): Observable<Cancion[]> {
     return this.firestore.collection<Cancion>('canciones').valueChanges();
   };
 
-  getCancion(id: number): Observable<Cancion[]> {
-    return this.firestore.collection<Cancion>('canciones').snapshotChanges().pipe(map(changes => {
-      return changes.map(action => {
-        const data = action.payload.doc.data() as Cancion;
-        data.id = action.payload.doc.id;
-        if (data.id == id) {
-          return data
-        }
-      })
+  getCancion(id: number) {
+    this.cancionDoc = this.firestore.doc<Cancion>(`canciones/${id}`);
+    return this.cancion = this.cancionDoc.snapshotChanges().pipe(map(action => {
+      const data = action.payload.data() as Cancion;
+      data.id = action.payload.id;
+      return data
     }))
-
-  };
+  }
 
 }
