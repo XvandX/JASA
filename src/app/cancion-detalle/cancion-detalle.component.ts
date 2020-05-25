@@ -23,7 +23,7 @@ export class CancionDetalleComponent implements OnInit {
 
   getCancion(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.cancionService.getCancion(id).subscribe(cancion => this.cancion = cancion)
+    this.cancionService.getCancion(id).subscribe(cancion => console.log(cancion[id - 1]));
   }
 
   goBack(): void {
