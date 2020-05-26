@@ -17,6 +17,7 @@ export class CancionService {
   private cancionDoc: AngularFirestoreDocument<Cancion>;
   private cancion: Observable<Cancion>;
 
+
   getCanciones(): Observable<Cancion[]> {
     return this.firestore.collection<Cancion>('canciones').valueChanges();
   };
@@ -27,6 +28,13 @@ export class CancionService {
       const data = action.payload.data() as Cancion;
       return data
     }))
+  }
+
+  updateCancion(cancion: Cancion): void {
+    console.log("la cancion", cancion)
+    let idCancion = cancion.id;
+    this.cancionDoc = this.firestore.doc<Cancion>(`canciones/${idCancion}`);
+    this.cancionDoc.update(cancion);
   }
 
 }

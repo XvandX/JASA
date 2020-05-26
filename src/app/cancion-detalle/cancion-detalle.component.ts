@@ -30,4 +30,8 @@ export class CancionDetalleComponent implements OnInit {
     this.location.back();
   }
 
+  updateCancion() {
+    this.cancionService.updateCancion(this.cancion);
+  }
+
 }
