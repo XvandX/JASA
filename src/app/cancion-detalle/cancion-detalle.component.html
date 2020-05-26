@@ -1,18 +1,18 @@
 <div *ngIf="cancion" class="container-detalle uk-margin-medium-right">
-  <h3 class="uk-margin-small-left uk-margin-medium-bottom mat-h3"><button mat-icon-button color="#333333"
+  <h3 class="uk-margin-medium-left uk-margin-medium-bottom mat-h3"><button mat-icon-button color="#333333"
       (click)="goBack()" class="uk-margin-medium-right">
       <mat-icon>arrow_back</mat-icon>Volver atrás
     </button></h3>
-  <div class="uk-card uk-card-secondary uk-width-large uk-margin-small-left">
+  <div class="uk-card uk-card-secondary uk-width-xlarge uk-margin-medium-left">
     <div class="uk-card-header uk-flex uk-flex-between">
       <h2 class="uk-card-title">{{ cancion.title }}</h2>
-      <button mat-icon-button color="accent" class="uk-margin-medium-right" (click)="updateCancion()">
-        <mat-icon>save_alt</mat-icon>Guardar
+      <button id="save" mat-mini-fab (click)="updateCancion()">
+        <mat-icon>save_alt</mat-icon>
       </button>
     </div>
     <div class="uk-card-body">
       <div class="uk-flex uk-flex-around">
-        <div class="uk-width-2-3 uk-margin-medium-top">
+        <div class="uk-width-2-3 uk-flex uk-flex-middle">
           <img src="{{ cancion.src }}" alt="portada" class="portada" />
         </div>
         <form (ngSubmit)="cancionForm" #cancionForm="ngForm">

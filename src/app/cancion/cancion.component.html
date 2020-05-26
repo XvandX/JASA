@@ -1,13 +1,12 @@
 <div class="container-song uk-flex uk-flex-wrap uk-flex-between uk-padding-remove">
   <div>
-    <h3 class="uk-margin-medium-left mat-h3">Buscador de música:</h3>
     <mat-form-field class="uk-margin-medium-left uk-width-* busqueda">
       <input id="buscador" matInput type="search" name="filterSong" class="uk-width-* uk-margin-medium-left"
         [(ngModel)]="filterSong" />
       <mat-placeholder class="placeholder">buscar...</mat-placeholder>
     </mat-form-field>
-    <table class="uk-table uk-table-small uk-table-striped uk-width-*  uk-margin-medium-left">
-      <mat-list>
+    <mat-list>
+      <table class="uk-table uk-table-small uk-width-*  uk-margin-medium-left">
         <thead>
           <th>
             <mat-list-item>Título</mat-list-item>
@@ -32,7 +31,7 @@
             </td>
           </tr>
         </tbody>
-      </mat-list>
-    </table>
+      </table>
+    </mat-list>
   </div>
 </div>

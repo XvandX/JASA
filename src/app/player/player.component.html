@@ -1,10 +1,21 @@
 <audio src="{{cancion.url}}" id="player" #player></audio>
-<button mat-icon-button color="accent" id="play" (click)="onAudioPlay()"><mat-icon>play_arrow</mat-icon></button>
-<button mat-icon-button color="accent" id="pause" (click)="onAudioPause()"><mat-icon>pause</mat-icon></button>
-<button mat-icon-button color="accent" id="stop" (click)="onAudioStop()"><mat-icon>stop</mat-icon></button>
-<button mat-icon-button color="accent" id="volumedown" (click)="onAudioVolumeDown()"><mat-icon>volume_down</mat-icon></button>
-<button mat-icon-button color="accent" id="volumeup" (click)="onAudioVolumeUp()"><mat-icon>volume_up</mat-icon></button>
-<span id="remaining" #remaining></span><span id="time" class="uk-align-right uk-margin-remove-bottom" #time></span>
+<button mat-icon-button id="play" (click)="onAudioPlay()">
+  <mat-icon>play_arrow</mat-icon>
+</button>
+<button mat-icon-button id="pause" (click)="onAudioPause()">
+  <mat-icon>pause</mat-icon>
+</button>
+<button mat-icon-button id="stop" (click)="onAudioStop()">
+  <mat-icon>stop</mat-icon>
+</button>
+<button mat-icon-button id="volumedown" (click)="onAudioVolumeDown()">
+  <mat-icon>volume_down</mat-icon>
+</button>
+<button mat-icon-button id="volumeup" (click)="onAudioVolumeUp()">
+  <mat-icon>volume_up</mat-icon>
+</button>
+<span id="remaining" #remaining></span>
+<span id="time" class="uk-align-right" #time></span>
 <div id="progressBar" class="uk-width-1-1">
   <div id="progress" #progress>
 
